@@ -117,7 +117,7 @@ export default function createNavigationContainer<S: *, O>(
       if (
         typeof this.props.onNavigationStateChange === 'undefined' &&
         this._isStateful() &&
-        !!process.env.REACT_NAV_LOGGING
+        process.env.NODE_ENV === 'development'
       ) {
         /* eslint-disable no-console */
         if (console.group) {
